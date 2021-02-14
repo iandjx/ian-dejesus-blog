@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import ArticlePreview from "../components/article-preview"
-
+import Navigation from "../components/navigation"
 class IndexPage extends React.Component {
   render() {
     const siteTitle = get(this, "props.data.site.siteMetadata.title")
@@ -16,6 +16,7 @@ class IndexPage extends React.Component {
     return (
       <Layout location={this.props.location}>
         <div style={{ background: "#fff" }}>
+          <Navigation />
           <Helmet title={siteTitle} />
           {/* <img src="web-design.jpg" className="hero-background" /> */}
 
