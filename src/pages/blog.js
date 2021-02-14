@@ -1,72 +1,61 @@
 import React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
-
-import Img from "gatsby-image"
+import { graphql } from "gatsby"
+import get from "lodash/get"
+import { Helmet } from "react-helmet"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import ArticlePreview from "../components/article-preview"
 
-const Blog = () => {
-  const data = useStaticQuery(
-    graphql`
-      query {
-        allContentfulBlogPost {
-          edges {
-            node {
-              title
-              id
-              slug
-              publishDate(formatString: "Do MMMM, YYYY")
-              heroImage {
-                fluid(maxWidth: 750) {
-                  ...GatsbyContentfulFluid
-                }
-              }
-              description {
-                childMarkdownRemark {
-                  html
-                }
-              }
+class Blog extends React.Component {
+  render() {
+    const siteTitle = get(this, "props.data.site.siteMetadata.title")
+    const posts = get(this, "props.data.allContentfulBlogPost.edges")
+
+    return (
+      <Layout location={this.props.location}>
+        <div style={{ background: "#fff" }}>
+          <Helmet title={siteTitle} />
+          <div>Blog</div>
+          <div className="wrapper">
+            <h2 className="section-headline">Recent articles</h2>
+            <ul className="article-list">
+              {posts.map(({ node }) => {
+                return (
+                  <li key={node.slug}>
+                    <ArticlePreview article={node} />
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
+        </div>
+      </Layout>
+    )
+  }
+}
+
+export default Blog
+
+export const pageQuery = graphql`
+  query BlogIndexQuery {
+    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
+      edges {
+        node {
+          title
+          slug
+          publishDate(formatString: "MMMM Do, YYYY")
+          tags
+          heroImage {
+            fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
+              ...GatsbyContentfulFluid_tracedSVG
+            }
+          }
+          description {
+            childMarkdownRemark {
+              html
             }
           }
         }
       }
-    `
-  )
-  return (
-    <Layout>
-      <SEO title="Blog" />
-      <p>
-        <Link to="/">Go back to the homepage</Link>
-      </p>
-      <ul className="posts">
-        {data.allContentfulBlogPost.edges.map(edge => {
-          return (
-            <li className="post" key={edge.node.id}>
-              <h2>
-                <Link to={`/blog/${edge.node.slug}/`}>{edge.node.title}</Link>
-              </h2>
-              <div className="meta">
-                <span>Posted on {edge.node.publishedDate}</span>
-              </div>
-              {edge.node.featuredImage && (
-                <Img
-                  className="featured"
-                  fluid={edge.node.heroImage.fluid}
-                  alt={edge.node.title}
-                />
-              )}
-              <p className="excerpt">
-                {edge.node.description.childMarkdownRemark.html}
-              </p>
-              <div className="button">
-                <Link to={`/blog/${edge.node.slug}/`}>Read More</Link>
-              </div>
-            </li>
-          )
-        })}
-      </ul>
-    </Layout>
-  )
-}
-
-export default Blog
+    }
+  }
+`
