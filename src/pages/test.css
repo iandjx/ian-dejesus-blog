@@ -1,0 +1,47 @@
+.inner {
+  line-height: 1.15;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
+  font-family: system-ui, -apple-system, "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  /* box-sizing: border-box; */
+  background: #fff;
+  padding: 75px;
+  border-radius: 2px;
+  box-shadow: 0 2px 24px 5px rgba(0, 0, 0, 0.05);
+  margin: 0 auto;
+  max-width: 1040px;
+  width: 100%;
+}
+
+.post-list {
+  line-height: 1.15;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
+  font-family: system-ui, -apple-system, "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  /* box-sizing: border-box; */
+  perspective: 1000px;
+  width: 890px;
+}
+
+.article {
+  line-height: 1.15;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
+  font-family: system-ui, -apple-system, "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  /* box-sizing: border-box; */
+  display: flex;
+  margin-bottom: 60px;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  right: -13%;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  user-select: none;
+}

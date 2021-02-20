@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+.hero-background {
+  mask-image: linear-gradient(to right, black 20%, transparent 70%);
+  -webkit-mask-image: linear-gradient(to right, black 20%, transparent 70%);
+}
+
+.bg {
+  background-image: linear-gradient(
+      135deg,
+      rgb(255, 174, 39, 0.52) 0%,
+      rgb(222, 73, 109) 100%
+    ),
+    url("/images/web-design.jpg");
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  color: white;
+  font-family: "Titillium Web", sans-serif;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 87%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 87%);
+}
+.foo {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 87%);
+  clip-path: polygon(0% 17%, 100% 0%, 100% 87%, 0% 100%);
+}

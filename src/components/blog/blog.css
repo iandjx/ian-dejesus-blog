@@ -1,0 +1,150 @@
+.article {
+  font: 300 16px "Noto Sans", "Times New Roman", Serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: auto;
+  box-sizing: border-box;
+  display: block;
+  float: left;
+  overflow: hidden;
+  width: 29.552083333%;
+  margin-right: 3.78125%;
+  margin-bottom: 60px;
+  transform: translateZ(0);
+  text-align: center;
+  border-radius: 3px;
+  background: #fff;
+  position: absolute;
+  left: 0%;
+  top: 0px;
+}
+
+.post-header-image {
+  font: 300 16px "Noto Sans", "Times New Roman", Serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: auto;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 3px 3px 0 0;
+}
+
+.post-info {
+  font: 300 16px "Noto Sans", "Times New Roman", Serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: auto;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 8.113590263691684%;
+  margin-top: -12.5%;
+}
+
+.post-category {
+  font: 300 16px "Noto Sans", "Times New Roman", Serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: auto;
+  text-align: center;
+  box-sizing: border-box;
+  transition: color 0.15s ease-out, border 0.15s ease-out,
+    opacity 0.15s ease-out, background-color 0.15s ease-out;
+  text-decoration: none;
+  outline: none;
+  font-family: "Montserrat", "Arial", Sans-Serif;
+  display: inline-block;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 100px;
+  font-size: 10px;
+  padding: 10px 25px;
+  background: rgb(237, 121, 2);
+}
+
+.post-title {
+  font: 300 16px "Noto Sans", "Times New Roman", Serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: auto;
+  text-align: center;
+  box-sizing: border-box;
+  font-family: "Montserrat", "Arial", Sans-Serif;
+  letter-spacing: -0.25px;
+  color: #2d2f34;
+  font-weight: 600;
+  margin: 8.113590263691684% auto;
+  font-size: 22px;
+  line-height: 36px;
+  width: 92%;
+}
+
+.post-excerpt {
+  font: 300 16px "Noto Sans", "Times New Roman", Serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: auto;
+  text-align: center;
+  box-sizing: border-box;
+  font-family: "Noto Sans", "Times New Roman", Serif;
+  font-weight: 400;
+  color: #7d828c;
+  margin: 8.113590263691684% 0;
+  font-size: 14px;
+  line-height: 29px;
+}
+
+/* line-height: 1.15;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-webkit-tap-highlight-color: transparent;
+font-family: system-ui,-apple-system,"Helvetica Neue",Helvetica,Arial,sans-serif;
+box-sizing: border-box;
+background-color: transparent;
+text-decoration: none;
+outline: 0;
+transition: .5s;
+max-width: 47%;
+display: block;
+order: 2;
+perspective: 1000px;
+transform-style: preserve-3d;
+user-select: none;
+transform: rotateX(0deg) rotateY(0deg);
+position: relative;
+will-change: transform;
+transition-property: transform;
+transition-duration: 0.2s;
+transition-timing-function: cubic-bezier(0.3, 1, 0.2, 1);]]]
+
+
+line-height: 1.15;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-webkit-tap-highlight-color: transparent;
+font-family: system-ui,-apple-system,"Helvetica Neue",Helvetica,Arial,sans-serif;
+user-select: none;
+box-sizing: border-box;
+width: 460px;
+height: 460px;
+max-width: 100%;
+max-height: 100%;
+background-color: #c5d2d9;
+background-repeat: no-repeat;
+background-position: 50%;
+background-size: cover;
+border-radius: 2px;
+box-shadow: 5px 6px 26px -3px rgba(0,0,0,.22);
+background-image: url(https://images.unsplash.com/photo-1518623001395-125242310d0c?ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;fm&#x3D;jpg&amp;crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;w&#x3D;1080&amp;fit&#x3D;max&amp;ixid&#x3D;eyJhcHBfaWQiOjExNzczfQ);
+
+
+line-height: 1.15;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-webkit-tap-highlight-color: transparent;
+font-family: system-ui,-apple-system,"Helvetica Neue",Helvetica,Arial,sans-serif;
+box-sizing: border-box;
+display: flex;
+margin-bottom: 60px;
+position: relative;
+align-items: center;
+justify-content: space-between;
+right: -13%;
+perspective: 1000px;
+transform-style: preserve-3d;
+user-select: none; */
+
