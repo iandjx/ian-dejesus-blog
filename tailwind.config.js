@@ -5,7 +5,11 @@ module.exports = {
     fontFamily: {
       sans: ["Titillium Web", "ui-sans-serif"],
     },
-    extend: {},
+    extend: {
+      maxHeight: {
+        500: "30rem",
+      },
+    },
   },
   variants: {
     extend: {},

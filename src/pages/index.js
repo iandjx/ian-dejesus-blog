@@ -41,12 +41,15 @@ const IndexPage = () => {
         <main className="bg-blue-50 mt-20 foo w-full p-10 mb-5">
           <div className=" m-28 mt-36 p-4">
             <div className="w-full border-solid border-2">
-              <article className="max-h-96 overflow-y-hidden flex">
+              <article className="max-h-96 overflow-y-hidden flex mb-5">
                 <img className="w-3/5 px-3" src="image_1.jpg" alt="hello" />
                 <div className="p-3">
                   <div className="text-sm text-gray-400 my-5">ILLUSTRATION</div>
                   <div className="text-6xl font-bold">
                     Build a website in minutes with Adobe
+                  </div>
+                  <div className="text-sm mt-10 text-gray-500">
+                    <span>11/13/2019 </span> | <span> 12 min read</span>
                   </div>
                 </div>
               </article>

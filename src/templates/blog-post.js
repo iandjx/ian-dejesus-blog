@@ -4,35 +4,28 @@ import { Helmet } from "react-helmet"
 import get from "lodash/get"
 import Img from "gatsby-image"
 
-class BlogPostTemplate extends React.Component {
-  render() {
-    const post = get(this.props, "data.contentfulBlogPost")
-    const siteTitle = get(this.props, "data.site.siteMetadata.title")
+const BlogPostTemplate = props => {
+  const post = get(props, "data.contentfulBlogPost")
+  const siteTitle = get(props, "data.site.siteMetadata.title")
 
-    return (
-      <div style={{ background: "#fff" }}>
-        <Helmet title={`${post.title} | ${siteTitle}`} />
-        <div>
-          <Img alt={post.title} fluid={post.heroImage.fluid} />
-        </div>
-        <div className="wrapper">
-          <h1 className="section-headline">{post.title}</h1>
-          <p
-            style={{
-              display: "block",
-            }}
-          >
-            {post.publishDate}
-          </p>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: post.body.childMarkdownRemark.html,
-            }}
-          />
-        </div>
+  return (
+    <div className="px-56 flex flex-col items-center m-10">
+      <Helmet title={`${post.title} | ${siteTitle}`} />
+      <div className="text-left w-full text-6xl font-bold">{post.title}</div>
+      <div className="text-left w-full text-6xl font-bold">
+        {post.publishDate}
       </div>
-    )
-  }
+
+      <div className="w-full max-h-500 overflow-hidden">
+        <Img alt={post.title} fluid={post.heroImage.fluid} className="h-auto" />
+      </div>
+      <div
+        dangerouslySetInnerHTML={{
+          __html: post.body.childMarkdownRemark.html,
+        }}
+      />
+    </div>
+  )
 }
 
 export default BlogPostTemplate
@@ -43,7 +36,7 @@ export const pageQuery = graphql`
       title
       publishDate(formatString: "MMMM Do, YYYY")
       heroImage {
-        fluid(maxWidth: 1180, background: "rgb:000000") {
+        fluid(background: "rgb:000000") {
           ...GatsbyContentfulFluid_tracedSVG
         }
       }
