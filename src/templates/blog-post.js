@@ -3,6 +3,22 @@ import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 import get from "lodash/get"
 import Img from "gatsby-image"
+import ReactMarkdown from "react-markdown"
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
+import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism"
+
+const renderers = {
+  code: ({ language, value }) => {
+    return (
+      <SyntaxHighlighter
+        style={dracula}
+        language={language}
+        children={value}
+        showLineNumbers
+      />
+    )
+  },
+}
 
 const BlogPostTemplate = props => {
   const post = get(props, "data.contentfulBlogPost")
@@ -19,11 +35,12 @@ const BlogPostTemplate = props => {
       <div className="w-full max-h-500 overflow-hidden">
         <Img alt={post.title} fluid={post.heroImage.fluid} className="h-auto" />
       </div>
-      <div
-        dangerouslySetInnerHTML={{
-          __html: post.body.childMarkdownRemark.html,
-        }}
-      />
+      <div id="blog-body">
+        <ReactMarkdown
+          renderers={renderers}
+          children={post.body.childMarkdownRemark.rawMarkdownBody}
+        />
+      </div>
     </div>
   )
 }
@@ -42,7 +59,7 @@ export const pageQuery = graphql`
       }
       body {
         childMarkdownRemark {
-          html
+          rawMarkdownBody
         }
       }
     }

@@ -5,6 +5,7 @@
 * {
   font-family: "Poppins", sans-serif;
 }
+
 .hero-background {
   mask-image: linear-gradient(to right, black 20%, transparent 70%);
   -webkit-mask-image: linear-gradient(to right, black 20%, transparent 70%);
@@ -25,7 +26,32 @@
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 87%);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 87%);
 }
+
 .foo {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 87%);
   clip-path: polygon(0% 17%, 100% 0%, 100% 87%, 0% 100%);
+}
+
+#blog-body > * {
+  @apply text-gray-600 text-lg;
+}
+
+#blog-body > h2 {
+  @apply text-2xl;
+}
+
+#blog-body > p > img {
+  @apply h-96;
+}
+
+#blog-body > p {
+  @apply text-gray-600 text-lg my-4 w-full;
+}
+
+#blog-body > pre > code {
+  @apply text-black mx-4 text-base;
+}
+
+#blog-body > pre {
+  @apply bg-gray-300  p-3 max-w-5xl;
 }
