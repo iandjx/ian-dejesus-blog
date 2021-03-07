@@ -55,3 +55,11 @@
 #blog-body > pre {
   @apply bg-gray-300  p-3 max-w-5xl;
 }
+
+#blog-body > p > a {
+  @apply text-blue-500;
+}
+
+#blog-body > ol {
+  @apply my-4;
+}

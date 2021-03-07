@@ -28,11 +28,9 @@ const BlogPostTemplate = props => {
     <div className="px-56 flex flex-col items-center m-10">
       <Helmet title={`${post.title} | ${siteTitle}`} />
       <div className="text-left w-full text-6xl font-bold">{post.title}</div>
-      <div className="text-left w-full text-6xl font-bold">
-        {post.publishDate}
-      </div>
+      <div className="text-left w-full">{post.publishDate}</div>
 
-      <div className="w-full max-h-500 overflow-hidden">
+      <div className="w-full max-h-500 overflow-hidden my-4">
         <Img alt={post.title} fluid={post.heroImage.fluid} className="h-auto" />
       </div>
       <div id="blog-body">
